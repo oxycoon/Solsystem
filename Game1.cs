@@ -26,7 +26,7 @@ namespace Solsystem
         private BasicEffect effect;
 
         //Camera
-        private Vector3 cameraPosition = new Vector3(3.5f, 2.0f, 5.0f);
+        private Vector3 cameraPosition = new Vector3(1.0f, 1.0f, 1.0f);
         private Vector3 cameraTarget = Vector3.Zero;
         private Vector3 cameraUpVector = new Vector3(0.0f, 1.0f, 0.0f);
 
@@ -43,14 +43,14 @@ namespace Solsystem
 
         // Planets
         private Planet mercury, venus, terra, mars, jupiter, saturn, uranus, neptune;
-        private double re_mercury = 2439.7, rp_mercury = 2439.7;        //radius for mercury
-        private double re_venus = 6051.8, rp_venus = 6051.8;            //radius for venus
-        private double re_terra = 6378.1, rp_terra = 6356.8;            //radius for earth
-        private double re_mars = 3396.2, rp_mars = 3376.2;              //radius for mars
-        private double re_jupiter = 71492.0, rp_jupiter = 66854.0;      //radius for jupiter
-        private double re_saturn = 60268.0, rp_saturn = 54364.0;        //radius for saturn
-        private double re_uranus = 25559.0, rp_uranus = 24973.0;        //radius for uranus
-        private double re_neptune = 24764.0, rp_neptune = 24341.0;      //radius for neptune
+        private float re_mercury = 2439.7f, rp_mercury = 2439.7f;        //radius for mercury
+        private float re_venus = 6051.8f, rp_venus = 6051.8f;            //radius for venus
+        private float re_terra = 6378.1f, rp_terra = 6356.8f;            //radius for earth
+        private float re_mars = 3396.2f, rp_mars = 3376.2f;              //radius for mars
+        private float re_jupiter = 71492.0f, rp_jupiter = 66854.0f;      //radius for jupiter
+        private float re_saturn = 60268.0f, rp_saturn = 54364.0f;        //radius for saturn
+        private float re_uranus = 25559.0f, rp_uranus = 24973.0f;        //radius for uranus
+        private float re_neptune = 24764.0f, rp_neptune = 24341.0f;      //radius for neptune
 
         private float dc_mercury = 6.98f * (float)Math.Pow(10, 7), df_mercury = 4.60f * (float)Math.Pow(10, 7);  //distance from sol at closest and furthest
         private float dc_venus = 1.075f * (float)Math.Pow(10, 8), df_venus = 1.098f * (float)Math.Pow(10, 8);
@@ -217,15 +217,17 @@ namespace Solsystem
         private void initPlanets()
         {
             Matrix[] tempWVP = { world, view, projection };
+            float[] tempRot = {0.0f, 0.0f, 0.0f};
+            float[] tempOrbit = {0.0f, 0.0f, 0.0f};
 
-            mercury = new Planet(tempWVP, "Mercury", sol, new Vector3(1000, 1000, 1000), 50.0f, re_mercury, dc_mercury, );
-            venus = new Planet();
-            terra = new Planet();
-            mars = new Planet();
-            jupiter = new Planet();
-            saturn = new Planet();
-            uranus = new Planet();
-            neptune = new Planet();
+            mercury = new Planet(tempWVP, "Mercury", sol, new Vector3(dc_mercury, 0.0f, 0.0f), 50.0f, re_mercury, dc_mercury, tempRot, tempOrbit);
+            venus = new Planet(tempWVP, "Venus", sol, new Vector3(dc_venus, 0.0f, 0.0f), 50.0f, re_venus, dc_venus, tempRot, tempOrbit);
+            terra = new Planet(tempWVP, "Terra", sol, new Vector3(dc_terra, 0.0f, 0.0f), 50.0f, re_terra, dc_terra, tempRot, tempOrbit);
+            mars = new Planet(tempWVP, "Mars", sol, new Vector3(dc_mars, 0.0f, 0.0f), 50.0f, re_mars, dc_mercury, tempRot, tempOrbit);
+            jupiter = new Planet(tempWVP, "Jupiter", sol, new Vector3(dc_jupiter, 0.0f, 0.0f), 50.0f, re_jupiter, dc_jupiter, tempRot, tempOrbit);
+            saturn = new Planet(tempWVP, "Saturn", sol, new Vector3(dc_saturn, 0.0f, 0.0f), 50.0f, re_saturn, dc_saturn, tempRot, tempOrbit);
+            uranus = new Planet(tempWVP, "Uranus", sol, new Vector3(dc_uranus, 0.0f, 0.0f), 50.0f, re_uranus, dc_uranus, tempRot, tempOrbit);
+            neptune = new Planet(tempWVP, "Neptune", sol, new Vector3(dc_neptune, 0.0f, 0.0f), 50.0f, re_neptune, dc_neptune, tempRot, tempOrbit);
         }
 
         private void loadModels()
