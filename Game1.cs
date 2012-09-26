@@ -39,10 +39,10 @@ namespace Solsystem
 
         // Sun
         private Model sol;
-        private double re_sol = 696342.0, rp_sol = 696342.0;            //radius for the sun
+        private double re_sol = 69634.2, rp_sol = 69634.2;            //radius for the sun
 
         // Planets
-        private Model mercury, venus, terra, mars, jupiter, saturn, uranus, neptune;
+        private Planet mercury, venus, terra, mars, jupiter, saturn, uranus, neptune;
         private double re_mercury = 2439.7, rp_mercury = 2439.7;        //radius for mercury
         private double re_venus = 6051.8, rp_venus = 6051.8;            //radius for venus
         private double re_terra = 6378.1, rp_terra = 6356.8;            //radius for earth
@@ -216,24 +216,21 @@ namespace Solsystem
 
         private void initPlanets()
         {
- 
+            Matrix[] tempWVP = { world, view, projection };
+
+            mercury = new Planet(tempWVP, "Mercury", sol, new Vector3(1000, 1000, 1000), 50.0f, re_mercury, dc_mercury, );
+            venus = new Planet();
+            terra = new Planet();
+            mars = new Planet();
+            jupiter = new Planet();
+            saturn = new Planet();
+            uranus = new Planet();
+            neptune = new Planet();
         }
 
         private void loadModels()
         {
             sol = Content.Load<Model>("sphere");
-
-            /* 
-             * Planets
-             */
-            mercury = Content.Load<Model>("sphere");
-            venus = Content.Load<Model>("sphere");
-            terra = Content.Load<Model>("sphere");
-            mars = Content.Load<Model>("sphere");
-            jupiter = Content.Load<Model>("sphere");
-            saturn = Content.Load<Model>("sphere");
-            uranus = Content.Load<Model>("sphere");
-            neptune = Content.Load<Model>("sphere");
 
             /*
              * Moons

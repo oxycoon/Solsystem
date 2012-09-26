@@ -11,7 +11,6 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Solsystem
 {
-
     public class Planet
     {
         // Planet matrixes
