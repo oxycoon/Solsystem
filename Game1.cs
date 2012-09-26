@@ -17,6 +17,9 @@ namespace Solsystem
     /// 
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        // Planet/World/Sun world matrix stack
+        private Stack<Matrix> matrixStack = new Stack<Matrix>();
+
         // SOME PRIVATE VERIABLES
         private GraphicsDeviceManager graphics;
         private ContentManager content;

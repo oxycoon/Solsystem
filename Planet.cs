@@ -13,11 +13,16 @@ namespace Solsystem
 {
     public class Planet
     {
+        private BasicEffect effect;
+
         // Planet matrixes
-        private Matrix matScale, matRotate, matTranslate, matOrbitTranslate;
+        private Matrix matScale, matRotate, matTranslate, matOrbitRotation, matOrbitTranslate;
         Matrix planetWorld, planetView, planetProjection;
 
         // Planet attributes
+        private float planetOrbitY;
+
+
         private String planetName;
         public String PlanetName
         {
@@ -45,8 +50,8 @@ namespace Solsystem
             set { planetScale = value; }
         }
 
-        private double planetDistanceFromSun;
-        public double PlanetDistanceFromSun
+        private float planetDistanceFromSun;
+        public float PlanetDistanceFromSun
         {
             get { return planetDistanceFromSun; }
             set { planetDistanceFromSun = value; }
@@ -87,7 +92,7 @@ namespace Solsystem
 
         }
 
-        public Planet(Matrix[] WVP, String name, Model model, Vector3 position, float speed, float scale, double distanceSun, float[] rotation)
+        public Planet(Matrix[] WVP, String name, Model model, Vector3 position, float speed, float scale, float distanceSun, float[] rotation)
         {
             this.planetWorld = WVP[0];
             this.planetView = WVP[1];
@@ -105,8 +110,9 @@ namespace Solsystem
             this.planetRotationZ = rotation[2];
         }
 
-        public void DrawPlanet(GameTime gameTime)
+        public void DrawPlanet(GameTime gameTime, Stack<Matrix> matrixStack)
         {
+            Matrix _world = matrixStack.Peek();
 
             // Scaling matrix
             matScale = Matrix.CreateScale(planetScale);
@@ -120,14 +126,17 @@ namespace Solsystem
             planetRotationY = planetRotationY % (float)(2 * Math.PI);
 
             // Orbit/Rotation matrix
+            matOrbitTranslate = Matrix.CreateTranslation(planetDistanceFromSun, 0.0f, 0.0f);
+            planetOrbitY += (planetSpeed / 60) * (float)gameTime.ElapsedGameTime.Milliseconds / 50.0f;
+            planetOrbitY = planetOrbitY % (float)(2 * Math.PI);
+            matOrbitRotation = Matrix.CreateRotationY(planetOrbitY);
             
-
             // Creating the new world
-            
-            
+            planetWorld = matScale * matRotate * matOrbitTranslate * matOrbitRotation * _world;
 
+            effect.World = planetWorld;
 
-
+            planetModel.Draw(planetWorld, planetView, planetProjection);
         }
     }
 }
