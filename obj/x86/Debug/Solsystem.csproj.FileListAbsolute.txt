@@ -12,3 +12,9 @@ C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsyst
 C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Solsystem.exe
 C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Solsystem.pdb
+C:\Users\MrN\Documents\Visual Studio 2010\Projects\Solsystem\bin\x86\Debug\Solsystem.exe
+C:\Users\MrN\Documents\Visual Studio 2010\Projects\Solsystem\bin\x86\Debug\Solsystem.pdb
+C:\Users\MrN\Documents\Visual Studio 2010\Projects\Solsystem\obj\x86\Debug\Solsystem.csprojResolveAssemblyReference.cache
+C:\Users\MrN\Documents\Visual Studio 2010\Projects\Solsystem\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\MrN\Documents\Visual Studio 2010\Projects\Solsystem\obj\x86\Debug\Solsystem.exe
+C:\Users\MrN\Documents\Visual Studio 2010\Projects\Solsystem\obj\x86\Debug\Solsystem.pdb

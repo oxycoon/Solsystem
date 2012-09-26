@@ -16,6 +16,7 @@ namespace Solsystem
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        // SOME PRIVATE VERIABLES
         private GraphicsDeviceManager graphics;
         private ContentManager content;
         private GraphicsDevice device;
