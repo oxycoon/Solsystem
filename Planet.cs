@@ -104,6 +104,11 @@ namespace Solsystem
         }
 
 
+        public Planet()
+        {
+
+        }
+
         public Planet(Matrix[] WVP, String name, Model model, Vector3 position, float speed, float scale, double distanceSun, float[] rotation, float[] orbitRotation)
         {
             this.planetWorld = WVP[0];
