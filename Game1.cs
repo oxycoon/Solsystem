@@ -242,6 +242,11 @@ namespace Solsystem
             neptune = new Planet(tempWVP, "Neptune", sol, new Vector3(dc_neptune, 0.0f, 0.0f), speed_neptune, re_neptune, dc_neptune, tempRot);
         }
 
+        private void initMoons()
+        {
+
+        }
+
         private void loadModels()
         {
             sol = Content.Load<Model>("sphere");
