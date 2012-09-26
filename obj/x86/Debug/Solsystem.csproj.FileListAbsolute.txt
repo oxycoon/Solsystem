@@ -1,0 +1,14 @@
+\\taraldsvik\home$\500311\My Documents\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\bin\x86\Debug\Solsystem.exe
+\\taraldsvik\home$\500311\My Documents\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\bin\x86\Debug\Solsystem.pdb
+\\taraldsvik\home$\500311\My Documents\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\ResolveAssemblyReference.cache
+\\taraldsvik\home$\500311\My Documents\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+\\taraldsvik\home$\500311\My Documents\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Solsystem.exe
+\\taraldsvik\home$\500311\My Documents\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Solsystem.pdb
+\\taraldsvik\home$\500311\My Documents\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\bin\x86\Debug\Content\sphere.xnb
+C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\bin\x86\Debug\Content\sphere.xnb
+C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\bin\x86\Debug\Solsystem.exe
+C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\bin\x86\Debug\Solsystem.pdb
+C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Solsystem.exe
+C:\Users\Daniel\Documents\Skole\HiN\Datamaskingrafikk\Oblig3 - Solsystem\Solsystem\Solsystem\Solsystem\obj\x86\Debug\Solsystem.pdb
