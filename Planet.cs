@@ -14,7 +14,7 @@ namespace Solsystem
     public class Planet
     {
         // Planet matrixes
-        private Matrix matScale, matRotate, matTranslate;
+        private Matrix matScale, matRotate, matTranslate, matOrbitTranslate;
         Matrix planetWorld, planetView, planetProjection;
 
         // Planet attributes
@@ -81,35 +81,13 @@ namespace Solsystem
             set { planetRotationZ = value; }
         }
 
-        // Rotation/Orbit parent axis
-        private float planetSunOrbitRotationX;
-        public float PlanetSunOrbitRotationX
-        {
-            get { return planetSunOrbitRotationX; }
-            set { planetSunOrbitRotationX = value; }
-        }
-
-        private float planetSunOrbitRotationY;
-        public float PlanetSunOrbitRotationY
-        {
-            get { return planetSunOrbitRotationY; }
-            set { planetSunOrbitRotationY = value; }
-        }
-
-        private float planetSunOrbitRotationZ;
-        public float PlanetSunOrbitRotationZ
-        {
-            get { return planetSunOrbitRotationZ; }
-            set { planetSunOrbitRotationZ = value; }
-        }
-
 
         public Planet()
         {
 
         }
 
-        public Planet(Matrix[] WVP, String name, Model model, Vector3 position, float speed, float scale, double distanceSun, float[] rotation, float[] orbitRotation)
+        public Planet(Matrix[] WVP, String name, Model model, Vector3 position, float speed, float scale, double distanceSun, float[] rotation)
         {
             this.planetWorld = WVP[0];
             this.planetView = WVP[1];
@@ -125,14 +103,30 @@ namespace Solsystem
             this.planetRotationX = rotation[0];
             this.planetRotationY = rotation[1];
             this.planetRotationZ = rotation[2];
-
-            this.planetSunOrbitRotationX = orbitRotation[0];
-            this.planetSunOrbitRotationY = orbitRotation[1];
-            this.planetSunOrbitRotationZ = orbitRotation[2];
         }
 
-        public void DrawPlanet()
+        public void DrawPlanet(GameTime gameTime)
         {
+
+            // Scaling matrix
+            matScale = Matrix.CreateScale(planetScale);
+
+            // Translation matrix
+            matTranslate = Matrix.CreateTranslation(0.0f, 0.0f, 0.0f);
+
+            // Rotation matrix
+            matRotate = Matrix.CreateRotationY(planetRotationY);
+            planetRotationY += (float)gameTime.ElapsedGameTime.Milliseconds / 5000.0f;
+            planetRotationY = planetRotationY % (float)(2 * Math.PI);
+
+            // Orbit/Rotation matrix
+            
+
+            // Creating the new world
+            
+            
+
+
 
         }
     }
