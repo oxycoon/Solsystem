@@ -70,6 +70,16 @@ namespace Solsystem
         private double rot_uranus;
         private double rot_neptune;
 
+        // speed of the planets in km/s
+        private float speed_mercury = 47.8725f;
+        private float speed_venus = 35.0214f;
+        private float speed_terra = 29.7859f;
+        private float speed_mars = 24.1309f;
+        private float speed_jupiter = 13.0697f;
+        private float speed_saturn = 9.6724f;
+        private float speed_uranus = 6.8352f;
+        private float speed_neptune = 5.4778f;
+
         // Moons
         private Model luna; // earth
         private Model demios, phobos; // mars
@@ -218,16 +228,15 @@ namespace Solsystem
         {
             Matrix[] tempWVP = { world, view, projection };
             float[] tempRot = {0.0f, 0.0f, 0.0f};
-            float[] tempOrbit = {0.0f, 0.0f, 0.0f};
 
-            mercury = new Planet(tempWVP, "Mercury", sol, new Vector3(dc_mercury, 0.0f, 0.0f), 50.0f, re_mercury, dc_mercury, tempRot, tempOrbit);
-            venus = new Planet(tempWVP, "Venus", sol, new Vector3(dc_venus, 0.0f, 0.0f), 50.0f, re_venus, dc_venus, tempRot, tempOrbit);
-            terra = new Planet(tempWVP, "Terra", sol, new Vector3(dc_terra, 0.0f, 0.0f), 50.0f, re_terra, dc_terra, tempRot, tempOrbit);
-            mars = new Planet(tempWVP, "Mars", sol, new Vector3(dc_mars, 0.0f, 0.0f), 50.0f, re_mars, dc_mercury, tempRot, tempOrbit);
-            jupiter = new Planet(tempWVP, "Jupiter", sol, new Vector3(dc_jupiter, 0.0f, 0.0f), 50.0f, re_jupiter, dc_jupiter, tempRot, tempOrbit);
-            saturn = new Planet(tempWVP, "Saturn", sol, new Vector3(dc_saturn, 0.0f, 0.0f), 50.0f, re_saturn, dc_saturn, tempRot, tempOrbit);
-            uranus = new Planet(tempWVP, "Uranus", sol, new Vector3(dc_uranus, 0.0f, 0.0f), 50.0f, re_uranus, dc_uranus, tempRot, tempOrbit);
-            neptune = new Planet(tempWVP, "Neptune", sol, new Vector3(dc_neptune, 0.0f, 0.0f), 50.0f, re_neptune, dc_neptune, tempRot, tempOrbit);
+            mercury = new Planet(tempWVP, "Mercury", sol, new Vector3(dc_mercury, 0.0f, 0.0f), speed_mercury, re_mercury, dc_mercury, tempRot);
+            venus = new Planet(tempWVP, "Venus", sol, new Vector3(dc_venus, 0.0f, 0.0f), speed_venus, re_venus, dc_venus, tempRot);
+            terra = new Planet(tempWVP, "Terra", sol, new Vector3(dc_terra, 0.0f, 0.0f), speed_terra, re_terra, dc_terra, tempRot);
+            mars = new Planet(tempWVP, "Mars", sol, new Vector3(dc_mars, 0.0f, 0.0f), speed_mars, re_mars, dc_mercury, tempRot);
+            jupiter = new Planet(tempWVP, "Jupiter", sol, new Vector3(dc_jupiter, 0.0f, 0.0f), speed_jupiter, re_jupiter, dc_jupiter, tempRot);
+            saturn = new Planet(tempWVP, "Saturn", sol, new Vector3(dc_saturn, 0.0f, 0.0f), speed_saturn, re_saturn, dc_saturn, tempRot);
+            uranus = new Planet(tempWVP, "Uranus", sol, new Vector3(dc_uranus, 0.0f, 0.0f), speed_uranus, re_uranus, dc_uranus, tempRot);
+            neptune = new Planet(tempWVP, "Neptune", sol, new Vector3(dc_neptune, 0.0f, 0.0f), speed_neptune, re_neptune, dc_neptune, tempRot);
         }
 
         private void loadModels()
